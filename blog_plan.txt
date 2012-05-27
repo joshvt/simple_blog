@@ -1,0 +1,17 @@
++ Create new rails app
++ integrate rspec
++ get guard/spork running 
+	+ HOW: railscast on spork/guard/growl. make sure now 'test' dir.  '--drb' option, spechelper capbary (railscast how i test)
+
++ Create new page
+	+ create blog model, validates, 
+		+ has content, user, create time
+		+ FactoryGirl (not spork reload issue http://railscasts.com/episodes/285-spork?view=asciicast)
+	+ Create Project on GitHub
+	+ create blog controller, mass-ass-gnment
+		+ show/new/create.  No edit/update
+		+ errors
+	+ create blog view, bootstrap
+	+ create a user model
+
++ Create show page
