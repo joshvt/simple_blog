@@ -1,17 +1,19 @@
-+ Create new rails app
-+ integrate rspec
-+ get guard/spork running 
-	+ HOW: railscast on spork/guard/growl. make sure now 'test' dir.  '--drb' option, spechelper capbary (railscast how i test)
+X Create new rails app
+X integrate rspec
+X get guard/spork running 
+	X HOW: railscast on spork/guard/growl. make sure now 'test' dir.  '--drb' option, spechelper capbary (railscast how i test)
 
-+ Create new page
-	+ create blog model, validates, 
-		+ has content, user, create time
-		+ FactoryGirl (not spork reload issue http://railscasts.com/episodes/285-spork?view=asciicast)
-	+ Create Project on GitHub
-	+ create blog controller, mass-ass-gnment
-		+ show/new/create.  No edit/update
-		+ errors
-	+ create blog view, bootstrap
-	+ create a user model
-
-+ Create show page
+X create blog model, validates, 
+	X has content, user, create time
+	X FactoryGirl (not spork reload issue http://railscasts.com/episodes/285-spork?view=asciicast)
+X Create Project on GitHub
+X create blog controller, mass-ass-gnment
+	X show/new/create.  No edit/update
+	X errors, bootstrap/CSS
+		http://rubysource.com/twitter-bootstrap-less-and-sass-understanding-your-options-for-rails-3-1/
+		https://github.com/thomas-mcdonald/bootstrap-sass
+		http://www.communityguides.eu/articles/18
+O add dummy data - rake task
++ multiple models and relationships
++ authentication create a user model
++ email confirm on signup

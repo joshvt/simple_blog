@@ -1,0 +1,17 @@
+
+<%= render "shared/errors" %>
+
+<%= form_for @post  do |f| %>
+	<div>
+	<%= f.label "Title:"%> <p>
+	<%= f.text_field :title %>
+	</div>
+	<div>
+	<%= f.label "Content:" %><p>
+	<%= f.text_area :content %>	
+	</div>
+	<div>
+	<%= f.submit "Submit", class: "btn" %>
+	<%= link_to "Cancel", @post, class: "btn" %>
+	</div>
+<% end %>

@@ -5,7 +5,8 @@ describe Post do
 
 	it "should respond to content" do
 		post.should respond_to(:content)
-		post.should respond_to(:title)		
+		post.should respond_to(:title)	
+		post.should respond_to(:comments)	
 	end
 
 	it "should have valid content" do
@@ -22,6 +23,7 @@ describe Post do
 
 		post.title = "t"*105
 		post.should be_invalid
+		puts "Post in model spec: #{Post.count}"
 	end
 
 end

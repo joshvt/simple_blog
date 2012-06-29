@@ -1,16 +1,24 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'sqlite3'
+gem 'dynamic_form'
+gem 'bootstrap-sass', '~> 2.0.3'  # what group should this really be in
 
-group :test, :development do
+group :development, :test do
   gem "rspec-rails", "~> 2.0"
-  gem "capybara"
+  gem 'sqlite3'
   gem "guard-rspec"
-  gem "spork-rails"
   gem "guard-spork"
   gem "growl"
-  gem 'factory_girl_rails'
+  gem "spork-rails"
+  gem "faker"
+end
+
+group :test do
+  gem "capybara", '1.1.2'
+  gem 'factory_girl_rails', '1.4.0'
+  gem 'launchy'
+  gem "ruby-debug19"
 end
 
 
@@ -23,6 +31,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

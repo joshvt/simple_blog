@@ -4,4 +4,6 @@ class Post < ActiveRecord::Base
   validates :content, :title, presence: true
   validates :content, length: { maximum: 5000} 
   validates :title, length: { maximum: 100} 
+
+  has_many :comments
 end
