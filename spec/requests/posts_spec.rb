@@ -60,13 +60,17 @@ describe "Posts" do
 
   describe "show" do
     it "shows the title and content" do
-      p = FactoryGirl.create(:post)
+      p = FactoryGirl.create(:post_with_comments)
       visit post_path(p)
       page.should have_link("Back")
       page.should have_content(p.title)
       page.should have_content(p.content)
       page.should have_link("Back")
       page.should have_content("Posted on")
+      save_and_open_page
+      page.should have_content(p.comments[0].body)
+      page.should have_content("Post a comment")
+      page.should have_button("Create Comment")
     end
   end
 

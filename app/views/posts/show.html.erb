@@ -12,5 +12,25 @@
 		<p><%= link_to "Edit post", edit_post_path(@post) %></p>
 		<p> </p>
 		<p> <%= @post.content %> </p>
+		<p/>
+
+		<% if @post.comments.size > 0 %>	<h3>Comments</h3>	<% end %>
+
+		<% @post.comments.all.each  do |comment| %>
+			<div class="well"> 
+				<p> <em> Comment posted by XXX on <%= comment.updated_at %> </em> </p>
+				<p> <%= comment.body %>  </p>
+			</div>
+		<% end %>
+
+		<h2>Post a comment</h2>
+		<%= form_for([@post, @post.comments.build]) do |f| %>
+			<div class="field"> 
+				<%= f.text_area :body %> 
+			</div>
+			<div>
+				<%= f.submit "Create Comments" %>
+			</div>
+		<% end %>
 	</div>
 </div>
