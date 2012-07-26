@@ -67,7 +67,6 @@ describe "Posts" do
       page.should have_content(p.content)
       page.should have_link("Back")
       page.should have_content("Posted on")
-      save_and_open_page
       page.should have_content(p.comments[0].body)
       page.should have_content("Post a comment")
       page.should have_button("Create Comment")

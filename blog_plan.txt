@@ -19,4 +19,11 @@ X add dummy data - rake task
 	+ edit/delete comments
 + paging of posts
 + authentication create a user model
+	+ user model
+	+ sign up pages
+	+ session
 + email confirm on signup
+
+
+NEXT
++ Fix email: nil on save from web signup form

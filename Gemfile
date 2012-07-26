@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'dynamic_form'
 gem 'bootstrap-sass', '~> 2.0.3'  # what group should this really be in
+gem 'bcrypt-ruby', :require => 'bcrypt'
+
 
 group :development, :test do
   gem "rspec-rails", "~> 2.0"
@@ -12,6 +14,7 @@ group :development, :test do
   gem "growl"
   gem "spork-rails"
   gem "faker"
+
 end
 
 group :test do

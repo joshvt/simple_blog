@@ -1,4 +1,11 @@
 FactoryGirl.define do
+  
+  factory :user do
+    sequence (:email) {|n|  "{Faker::Internet.email} "}
+    password "p"
+    password_confirmation  "p"    
+  end
+
   factory :comment do
   	sequence (:body) {|n|  "Comment body #{n} - #{Faker::Lorem.paragraph} "}
   	post

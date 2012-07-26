@@ -6,15 +6,17 @@
 </div>
 <div class="row">
 	<div class="span8 offset2">
-<%= "No posts" unless @posts.any? %>
-<%  @posts.each do |post| %>
-	<div class="well">
-	<h2> <%= link_to post.title, post_path(post) %></h2>
-	<p> <%= post.content %> </p>
-	</div>
-<% end %>
+		<%= "No posts" unless @posts.any? %>
+		<%  @posts.each do |post| %>
+			<div class="well">
+			<h2> <%= link_to post.title, post_path(post) %></h2>
+			<p> <%= post.content %> </p>
+			</div>
+		<% end %>
 	</div>
 
 <div class="span2 well">
+	<%= link_to "Sign-up", "signup" %> |	<%= link_to "Login", "#" %>
+	
 	<%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
 </div>

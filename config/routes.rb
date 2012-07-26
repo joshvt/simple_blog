@@ -1,4 +1,6 @@
 SimpleBlog::Application.routes.draw do
+  get "signup" => "users#new", :as => "signup"
+  resources :users
   resources :posts do
     resources :comments
   end
