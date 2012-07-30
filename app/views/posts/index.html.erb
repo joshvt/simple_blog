@@ -16,7 +16,16 @@
 	</div>
 
 <div class="span2 well">
-	<%= link_to "Sign-up", "signup" %> |	<%= link_to "Login", "#" %>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash#{name}" %>
+  <% end %>
+
+  	<% if current_user %>
+  		Logged in as <%= current_user.email %>  | <%= link_to "Logout", logout_path %>
+  		<p/>
+  	<% else %>
+		<%= link_to "Sign-up", "signup" %> |	<%= link_to "Login", "login" %>  		
+  	<% end %>
 	
 	<%= link_to "New Post", new_post_path, class: "btn btn-primary" %>
 </div>

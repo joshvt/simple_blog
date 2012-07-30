@@ -21,8 +21,6 @@ describe "Posts" do
 	    it "displays blog content" do
   			post_one = FactoryGirl.create(:post) 
         post_two = FactoryGirl.create(:post)
-        puts "PostOne #{post_one.title}"
-        puts "PostTwo #{post_two.title}"
 
         visit posts_path
         page.should have_content(post_one.content)

@@ -17,13 +17,14 @@ X add dummy data - rake task
 + multiple models and relationships: Comments
 	+ Comments belong to Post; Post have many comments
 	+ edit/delete comments
-+ paging of posts
 + authentication create a user model
 	+ user model
 	+ sign up pages
 	+ session
 + email confirm on signup
++ paging of posts
++ profile pages
 
 
 NEXT
-+ Fix email: nil on save from web signup form
++ 

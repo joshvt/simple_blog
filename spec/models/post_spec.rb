@@ -23,7 +23,6 @@ describe Post do
 
 		post.title = "t"*105
 		post.should be_invalid
-		puts "Post in model spec: #{Post.count}"
 	end
 
 end
