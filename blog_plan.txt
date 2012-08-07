@@ -21,6 +21,7 @@ X add dummy data - rake task
 	+ user model
 	+ sign up pages
 	+ session
++ password reminder
 + email confirm on signup
 + paging of posts
 + profile pages

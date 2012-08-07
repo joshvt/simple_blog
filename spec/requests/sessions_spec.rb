@@ -33,8 +33,16 @@ describe "Sessions" do
       fill_in "password", with: "badpwd"
       click_on "Submit"
       page.should have_content("Invalid email or password")
+      visit logout_path
     end
 
+    describe "reset password" do 
+      it "should have link" do
+        visit login_path
+        page.should have_link("Forgotten password?")
+      end
+      
+    end
 
 end
 end

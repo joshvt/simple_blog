@@ -15,6 +15,11 @@ describe User do
 
 		user.password_hash.should be_present
 		user.password_salt.should be_present
+
+		user.auth_token.should be_present
+
+		u = User.find_by_auth_token(user.auth_token)
+		u.should == user
 	end
 
 	it "incorrect password should be be_invalid" do
@@ -27,10 +32,11 @@ describe User do
 	end
 
 	it "authenticates email and password" do
-		u = User.authenticate(user.email,"p")
+		user = FactoryGirl.create(:user)
+		u = user.authenticate("p")
 		user.should == u
 
-		u = User.authenticate(user.email,"d")
+		u = user.authenticate("d")
 		user.should_not == u
 	end
 
