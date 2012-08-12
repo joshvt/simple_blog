@@ -5,10 +5,11 @@ gem 'dynamic_form'
 gem 'bootstrap-sass', '~> 2.0.3'  # what group should this really be in
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem "faker"
+gem "pg"
 
 group :development, :test do
   gem "rspec-rails", "~> 2.0"
-  gem 'sqlite3'
+#  gem 'sqlite3'
   gem "guard-rspec"
   gem "guard-spork"
   gem "growl"
@@ -23,7 +24,7 @@ group :test do
 end
 
 group :production do
-  gem "pg"
+  #gem "pg"
 end
 
 # Gems used only for assets and not required
